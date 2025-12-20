@@ -11,17 +11,17 @@ void Buzzer_Init(void)
 	GPIO_Init(GPIOB, &GPIO_InitStructure);		//把结构体地址传给函数
 	//函数读取结构体里的配置，并让STM32的GPIOB端口按配置工作。
 	
-	GPIO_SetBits(GPIOB, GPIO_Pin_12);		//默认把B12设为高电平,灭灯
+	GPIO_SetBits(GPIOB, GPIO_Pin_12);		//默认把B12设为高电平,
 }
 
 void Buzzer_ON(void)
 {
-	GPIO_ResetBits(GPIOB, GPIO_Pin_12);		//把B12设为低电平,亮灯
+	GPIO_ResetBits(GPIOB, GPIO_Pin_12);		//把B12设为低电平,让蜂鸣器响起来
 }
 
 void Buzzer_OFF(void)
 {
-	GPIO_SetBits(GPIOB, GPIO_Pin_12);		//把B12设为高电平,让蜂鸣器响起来
+	GPIO_SetBits(GPIOB, GPIO_Pin_12);		//把B12设为高电平,不响
 }
 
 void Buzzer_Turn(void)
