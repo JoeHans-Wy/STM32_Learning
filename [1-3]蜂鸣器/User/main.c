@@ -15,7 +15,11 @@ int main(void)
 	while(1)
 	{
 		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
-		Delay_ms(500);
+		Delay_ms(100);
+		GPIO_SetBits(GPIOB, GPIO_Pin_12);
+		Delay_ms(100);
+		GPIO_ResetBits(GPIOB, GPIO_Pin_12);
+		Delay_ms(100);
 		GPIO_SetBits(GPIOB, GPIO_Pin_12);
 		Delay_ms(500);
 	}
